@@ -168,7 +168,7 @@ img {
 }
 
 /*=============== HOME ===============*/
-.home__contanier,
+.home__container,
 .home__data,
 .home__content,
 .home__images,
@@ -176,7 +176,7 @@ img {
   display: grid;
 }
 
-.home__contanier {
+.home__container {
   padding-block: 9rem 3rem;
   row-gap: 3rem;
 }
@@ -317,8 +317,8 @@ img {
 }
 
 /* For medium devices */
-@media screen and (min-width: 574px) {
-  .home__contanier {
+@media screen and (min-width: 576px) {
+  .home__container {
     grid-template-columns: 400px;
     justify-content: center;
   }
@@ -345,7 +345,7 @@ img {
   .nav__social {
     margin: 0;
   }
-  .home__contanier {
+  .home__container {
     height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -370,7 +370,38 @@ img {
 
 @media screen and (min-width: 1152px) {
   .container {
-    margin-inline: auot;
+    margin-inline: auto;
+  }
+  .home__container {
+    height: initial;
+    grid-template-columns: repeat(3, 320px);
+    justify-content: space-between;
+    padding-block: 11rem 4rem;
+  }
+  .home__data {
+    row-gap: 9.5rem;
+  }
+  .home__starts {
+    column-gap: 0.75rem;
+  }
+  .home__img {
+    width: 300px;
+  }
+  .home__info-img {
+    width: 150px;
+  }
+  .home__info-description {
+    font-size: var(--normal-font-size);
+  }
+  .home__info-content {
+    row-gap: 7.5rem;
   }
 }
+
 /* For taller devices */
+@media screen and (min-width: 1500px) and (min-height: 1032px) {
+  .home__container {
+    height: 100vh;
+    align-items: center;
+  }
+}
